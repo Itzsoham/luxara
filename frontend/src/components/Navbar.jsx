@@ -1,9 +1,29 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useShop } from "../contexts/ShopContext";
 
 function NavBar() {
   const [visible, setVisible] = useState(false);
+  const { setShowSearch, getCartCount } = useShop();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  function handleSearch() {
+    if (location.pathname.includes("/collection")) {
+      setShowSearch((search) => !search);
+    } else {
+      navigate("/collection");
+      setShowSearch(true);
+    }
+  }
+
+  // Track location changes to setShowSearch to false if not on '/collection'
+  useEffect(() => {
+    if (!location.pathname.includes("/collection")) {
+      setShowSearch(false);
+    }
+  }, [location.pathname, setShowSearch]);
 
   return (
     <div className="flex items-center justify-between py-5 font-medium">
@@ -35,14 +55,17 @@ function NavBar() {
           src={assets.search_icon}
           alt="search"
           className="w-5 cursor-pointer"
+          onClick={handleSearch}
         />
 
         <div className="group relative">
-          <img
-            src={assets.profile_icon}
-            alt="search"
-            className="w-5 cursor-pointer"
-          />
+          <Link to="/login">
+            <img
+              src={assets.profile_icon}
+              alt="search"
+              className="w-5 cursor-pointer"
+            />
+          </Link>
           <div className="dropdown-menu absolute right-0 hidden pt-4 group-hover:block">
             <div className="flex w-36 flex-col gap-2 rounded bg-slate-100 px-5 py-3 text-gray-500">
               <p className="cursor-pointer hover:text-black">My Profile</p>
@@ -55,7 +78,7 @@ function NavBar() {
         <Link to="/cart" className="relative">
           <img src={assets.cart_icon} className="w-5 min-w-5" alt="cart"></img>
           <p className="absolute bottom-[-5px] right-[-5px] aspect-square w-4 rounded-full bg-black text-center text-[8px] leading-4 text-white">
-            10
+            {getCartCount()}
           </p>
         </Link>
 
