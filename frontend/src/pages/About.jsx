@@ -58,7 +58,7 @@ function About() {
             With our user-friendly interface and hassle-free ordering process,
             shopping has never been easier.
           </p>
-        </div>{" "}
+        </div>
         <div className="flex flex-col gap-5 border px-10 py-8 sm:py-20 md:px-16">
           <b>Exceptional Customer Service:</b>
           <p>

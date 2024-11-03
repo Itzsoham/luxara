@@ -1,7 +1,6 @@
 import { assets } from "../assets/assets";
 
 function OurPolicy() {
- 
   return (
     <div className="flex flex-col justify-around gap-12 py-20 text-center text-xs text-gray-700 sm:flex-row sm:gap-20 sm:text-sm md:text-base">
       <div>
@@ -12,7 +11,7 @@ function OurPolicy() {
         ></img>
         <p className="font-semibold">Easy Exchange Policy</p>
         <p className="text-gray-400">We offer hassle free exhange policy</p>
-      </div>{" "}
+      </div>
       <div>
         <img
           src={assets.quality_icon}
@@ -21,7 +20,7 @@ function OurPolicy() {
         ></img>
         <p className="font-semibold">7 days Return Policy</p>
         <p className="text-gray-400">We provide 7 days return policy </p>
-      </div>{" "}
+      </div>
       <div>
         <img
           src={assets.support_img}
