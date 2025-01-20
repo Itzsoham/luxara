@@ -1,12 +1,15 @@
 import type { Metadata } from "next"
-import { Outfit } from "next/font/google"
+import localFont from "next/font/local"
 import "@workspace/ui/globals.css"
+
 import { Providers } from "@workspace/ui/main/providers"
 import { Toaster } from "@workspace/ui/components/toaster"
 
-const outfit = Outfit({
-  variable: "--font-outfit",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+const opensans = localFont({
+  src: "./fonts/OpenSansVF.ttf",
+  variable: "--font-opensans",
+  weight: "100 200 300 400 500 600 700 800 900",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
@@ -22,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${outfit.variable} antialiased`}>
+      <body className={`${opensans.variable} antialiased`}>
         <Providers>{children}</Providers>
         <Toaster />
       </body>

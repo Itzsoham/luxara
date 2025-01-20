@@ -3,10 +3,11 @@
 import AuthForm from "@/components/AuthForm"
 import { z } from "zod"
 
-export default function LoginPage() {
-  const SignInSchema = z.object({
+export default function SignUp() {
+  const SignUpSchema = z.object({
     email: z.string().email(),
     password: z.string().min(8),
+    name: z.string().min(3),
   })
   function signInWithCredentials(data: { email: string; password: string }) {
     console.log(data)
@@ -16,9 +17,9 @@ export default function LoginPage() {
 
   return (
     <AuthForm
-      formType="LOGIN"
-      schema={SignInSchema}
-      defaultValues={{ email: "", password: "" }}
+      formType="SIGN_UP"
+      schema={SignUpSchema}
+      defaultValues={{ name: "", email: "", password: "" }}
       onSubmit={signInWithCredentials}
     />
   )

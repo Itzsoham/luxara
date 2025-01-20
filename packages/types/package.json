@@ -1,0 +1,6 @@
+{
+  "name": "@workspace/types",
+  "version": "1.0.0",
+  "main": "index.d.ts",
+  "private": true
+}
