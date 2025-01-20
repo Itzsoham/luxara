@@ -1,22 +1,22 @@
+import AppSidebar from "@/components/navbar/AppSidebar"
+import Topbar from "@/components/navbar/Topbar"
+import { SidebarProvider } from "@workspace/ui/components/sidebar"
 import React, { ReactNode } from "react"
-
-// import Navbar from "@/components/navigation/navbar";
-// import LeftSidebar from "@/components/navigation/LeftSidebar";
-// import RightSidebar from "@/components/navigation/RightSidebar";
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <main className="">
-      {/* <Navbar /> */}
-      <div className="flex">
-        {/* <LeftSidebar /> */}
+    <SidebarProvider>
+      <main className="min-h-screen w-full bg-customgreys-primarybg flex">
+        <AppSidebar />
+        <div className="flex flex-1 overflow-hidden">
+          <div className="flex-grow min-h-screen transition-all duration-500 ease-in-out overflow-y-auto bg-customgreys-secondarybg;">
+            <Topbar />
 
-        {/* <section className="flex min-h-screen flex-1 flex-col px-6 pb-6 pt-36 max-md:pb-14 sm:px-14"> */}
-        <div className="mx-auto w-full max-w-5xl">{children}</div>
-        {/* </section> */}
-        {/* <RightSidebar /> */}
-      </div>
-    </main>
+            <div className="px-8 py-4">{children}</div>
+          </div>
+        </div>
+      </main>
+    </SidebarProvider>
   )
 }
 

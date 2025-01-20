@@ -1,6 +1,6 @@
 "use client"
 
-import AuthForm from "@/components/AuthForm"
+import AuthForm from "@/components/forms/AuthForm"
 import { z } from "zod"
 
 export default function LoginPage() {
