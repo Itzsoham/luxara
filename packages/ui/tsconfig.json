@@ -7,6 +7,6 @@
       "@workspace/ui/*": ["./src/*"]
     }
   },
-  "include": ["."],
+  "include": [".", "../../apps/admin/components/providers.tsx"],
   "exclude": ["node_modules", "dist"]
 }

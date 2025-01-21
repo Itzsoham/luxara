@@ -1,18 +1,18 @@
 "use client"
 
-import Modal from "@workspace/ui/main/modal"
+import { openModal } from "@/state"
+import { useAppDispatch, useAppSelector } from "@/state/redux"
+import { useEffect } from "react"
 
 export default function Page() {
-  return (
-    <div className="">
-      <Modal
-        title="Test"
-        description="Test description"
-        isOpen={true}
-        onClose={() => {}}
-      >
-        <div>Test children</div>
-      </Modal>
-    </div>
-  )
+  const isOpen = useAppSelector(state => state.global.isOpen)
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    if (isOpen === false) {
+      dispatch(openModal())
+    }
+  }, [isOpen, dispatch, openModal])
+
+  return <div className="text-white-100">root page</div>
 }

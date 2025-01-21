@@ -1,6 +1,6 @@
+import { Providers } from "@/providers"
 import { Toaster } from "@workspace/ui/components/toaster"
 import "@workspace/ui/globals.css"
-import { Providers } from "@workspace/ui/main/providers"
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 

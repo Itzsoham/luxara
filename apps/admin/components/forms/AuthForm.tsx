@@ -1,7 +1,7 @@
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
-import { ActionResponse } from "@workspace/types/index"
+import { ActionResponse } from "@workspace/types"
 import { Button } from "@workspace/ui/components/button"
 import {
   Form,

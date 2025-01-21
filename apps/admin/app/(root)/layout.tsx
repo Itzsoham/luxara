@@ -12,7 +12,6 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         <div className="flex flex-1 overflow-hidden">
           <div className="flex-grow min-h-screen transition-all duration-500 ease-in-out overflow-y-auto bg-customgreys-secondarybg;">
             <Topbar />
-
             <div className="px-8 py-4">{children}</div>
           </div>
         </div>
