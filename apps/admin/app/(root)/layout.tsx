@@ -1,5 +1,5 @@
-import AppSidebar from "@/components/navbar/AppSidebar"
-import Topbar from "@/components/navbar/Topbar"
+import AppSidebar from "@/components/navigation/AppSidebar"
+import Topbar from "@/components/navigation/Topbar"
 import { SidebarProvider } from "@workspace/ui/components/sidebar"
 import React, { ReactNode } from "react"
 

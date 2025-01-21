@@ -98,7 +98,7 @@ const AppSidebar = () => {
                   size="lg"
                   className={cn(
                     "pl-6 hover:bg-customgreys-secondarybg group-data-[collapsible=icon]:flex group-data-[collapsible=icon]:justify-center",
-                    !isActive && "text-customgreys-dirtyGrey",
+                    !isActive && "text-customgreys-dirtyGrey ",
                   )}
                 >
                   <Link
@@ -107,12 +107,14 @@ const AppSidebar = () => {
                     scroll={false}
                   >
                     <link.icon
-                      className={isActive ? "text-white-50" : "text-gray-500"}
+                      className={
+                        isActive ? "dark:text-white-50" : "dark:text-gray-500"
+                      }
                     />
                     <span
                       className={cn(
                         " font-medium text-md ml-4 group-data-[collapsible=icon]:hidden",
-                        isActive ? "text-white-50" : "text-gray-500",
+                        isActive ? "dark:text-white-50" : "dark:text-gray-500",
                       )}
                     >
                       {link.label}
