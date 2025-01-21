@@ -67,7 +67,7 @@ const AppSidebar = () => {
                     height={20}
                     className="transition duration-200 group-data-[collapsible=icon]:group-hover:brightness-75   w-auto"
                   />
-                  <p className="text-lg font-bold group-data-[collapsible=icon]:hidden">
+                  <p className="text-lg font-semibold group-data-[collapsible=icon]:hidden">
                     Luxara
                   </p>
                 </div>

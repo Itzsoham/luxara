@@ -1,12 +1,18 @@
-import { Button } from "@workspace/ui/components/button"
+"use client"
+
+import Modal from "@workspace/ui/main/modal"
 
 export default function Page() {
   return (
-    <div className="flex items-center justify-center min-h-svh">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold text-red">Hello World</h1>
-        <Button size="sm">Button 2</Button>
-      </div>
+    <div className="">
+      <Modal
+        title="Test"
+        description="Test description"
+        isOpen={true}
+        onClose={() => {}}
+      >
+        <div>Test children</div>
+      </Modal>
     </div>
   )
 }

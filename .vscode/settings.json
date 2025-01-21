@@ -2,8 +2,11 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   },
+  "eslint.workingDirectories": [
+    "./" // Ensures ESLint runs within the correct project directory
+  ],
   "prettier.tabWidth": 2,
   "prettier.useTabs": false,
   "prettier.semi": true,
