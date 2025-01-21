@@ -1,18 +1,8 @@
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Button } from "@workspace/ui/components/button"
-import { Input } from "@workspace/ui/components/input"
 import { ActionResponse } from "@workspace/types/index"
-import { ZodType, z } from "zod"
-import {
-  DefaultValues,
-  FieldValues,
-  Path,
-  SubmitHandler,
-  useForm,
-} from "react-hook-form"
-import { useRouter } from "next/navigation"
+import { Button } from "@workspace/ui/components/button"
 import {
   Form,
   FormControl,
@@ -21,9 +11,20 @@ import {
   FormLabel,
   FormMessage,
 } from "@workspace/ui/components/form"
-import Link from "next/link"
-import ROUTES from "@/constants/routes"
+import { Input } from "@workspace/ui/components/input"
 import { toast } from "@workspace/ui/hooks/use-toast"
+import Link from "next/link"
+import { useRouter } from "next/navigation"
+import {
+  DefaultValues,
+  FieldValues,
+  Path,
+  SubmitHandler,
+  useForm,
+} from "react-hook-form"
+import { ZodType, z } from "zod"
+
+import ROUTES from "@/constants/routes"
 
 interface AuthFormProps<T extends FieldValues> {
   schema: ZodType<T>

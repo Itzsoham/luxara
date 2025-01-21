@@ -1,7 +1,8 @@
+import { SidebarProvider } from "@workspace/ui/components/sidebar"
+import { ReactNode } from "react"
+
 import AppSidebar from "@/components/navigation/AppSidebar"
 import Topbar from "@/components/navigation/Topbar"
-import { SidebarProvider } from "@workspace/ui/components/sidebar"
-import React, { ReactNode } from "react"
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (

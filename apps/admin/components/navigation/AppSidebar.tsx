@@ -1,10 +1,5 @@
 "use client"
 
-import Image from "next/image"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import React from "react"
-
 import {
   Sidebar,
   SidebarContent,
@@ -28,8 +23,9 @@ import {
   Settings,
   Tv2,
 } from "lucide-react"
-
-// import Loading from "../Loading"
+import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 const AppSidebar = () => {
   //   const { user, isLoaded } = useUser()

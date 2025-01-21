@@ -1,6 +1,7 @@
-import SocialAuthForm from "@/components/forms/SocialAuthForm"
 import { LucideShoppingCart } from "lucide-react"
 import { ReactNode } from "react"
+
+import SocialAuthForm from "@/components/forms/SocialAuthForm"
 
 const AuthLayout = ({ children }: { children: ReactNode }) => {
   return (

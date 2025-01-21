@@ -1,9 +1,8 @@
+import { Toaster } from "@workspace/ui/components/toaster"
+import "@workspace/ui/globals.css"
+import { Providers } from "@workspace/ui/main/providers"
 import type { Metadata } from "next"
 import localFont from "next/font/local"
-import "@workspace/ui/globals.css"
-
-import { Providers } from "@workspace/ui/main/providers"
-import { Toaster } from "@workspace/ui/components/toaster"
 
 const opensans = localFont({
   src: "./fonts/OpenSansVF.ttf",

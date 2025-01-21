@@ -1,11 +1,5 @@
 "use client"
 
-import Image from "next/image"
-// import { signIn } from "next-auth/react"
-import React from "react"
-
-import ROUTES from "@/constants/routes"
-import { toast } from "@workspace/ui/hooks/use-toast"
 import { Button } from "@workspace/ui/components/button"
 
 const SocialAuthForm = () => {

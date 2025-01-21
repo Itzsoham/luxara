@@ -1,12 +1,11 @@
 "use client"
 
-import { Bell, BookOpen } from "lucide-react"
-import Link from "next/link"
-import React from "react"
-
 import { SidebarTrigger } from "@workspace/ui/components/sidebar"
 import { cn } from "@workspace/ui/lib/utils"
-import Theme from "./Theme"
+import { Bell, BookOpen } from "lucide-react"
+import Link from "next/link"
+
+import Theme from "@/components/navigation/Theme"
 
 const Topbar = () => {
   //   const { user } = useUser();

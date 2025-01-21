@@ -1,7 +1,8 @@
 "use client"
 
-import AuthForm from "@/components/forms/AuthForm"
 import { z } from "zod"
+
+import AuthForm from "@/components/forms/AuthForm"
 
 export default function LoginPage() {
   const SignInSchema = z.object({
